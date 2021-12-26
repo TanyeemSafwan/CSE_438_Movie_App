@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/cover_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#55000000"
+        android:minHeight="280dp"
+        android:scaleType="fitXY"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/movie_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="default movie"
+        android:textAlignment="textStart"
+        android:backgroundTint="#55000000"
+        android:textColor="@color/white"
+        app:layout_constraintRight_toRightOf="@id/cover_photo"
+        app:layout_constraintLeft_toLeftOf="@id/cover_photo"
+        app:layout_constraintBottom_toBottomOf="@id/cover_photo"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        />
+        <ImageView
+            android:id="@+id/poster_photo"
+
+            android:layout_width="90dp"
+            android:layout_height="150dp"
+            tools:ignore="MissingConstraints"
+            android:src="@mipmap/brazil"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@id/cover_photo"
+            android:translationX="10dp"
+            android:translationY="70dp"
+            />
+    <TextView
+        android:id="@+id/movie_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9.0"
+        app:layout_constraintStart_toEndOf="@id/poster_photo"
+        app:layout_constraintBottom_toBottomOf="@id/movie_title"
+        android:translationY="30dp"
+        android:translationX="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+    <RatingBar
+        android:id="@+id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/ratingBarStyleSmall"
+        android:numStars="5"
+        android:stepSize="0.5"
+        android:isIndicator="true"
+        app:layout_constraintStart_toEndOf="@id/movie_rating"
+        app:layout_constraintBottom_toBottomOf="@id/movie_title"
+        android:translationX="50dp"
+        android:translationY="25dp"/>
+    <TextView
+        android:id="@+id/release_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="valid Date"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movie_rating"
+        app:layout_constraintStart_toEndOf="@id/poster_photo"
+        android:layout_marginLeft="20dp"
+        android:translationY="40dp"/>
+
+    <TextView
+        android:id="@+id/movie_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Default Description"
+        android:layout_marginLeft="15dp"
+        android:justificationMode="inter_word"
+        android:textStyle="bold"
+        android:layout_marginRight="10dp"
+        app:layout_constraintStart_toEndOf="@id/movie_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:translationY="390dp"
+        android:minLines="7"
+        tools:ignore="MissingConstraints" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/movie_cast"
+        app:layout_constraintTop_toBottomOf="@id/movie_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:translationY="380dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"/>
+
+    <ImageButton
+        android:id="@+id/back_button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="?attr/homeAsUpIndicator"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="5dp"
+        android:backgroundTint="@color/material_on_background_disabled"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/mark_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_set_as"
+        app:layout_constraintRight_toRightOf="parent"
+        android:backgroundTint="@color/material_on_background_disabled"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
